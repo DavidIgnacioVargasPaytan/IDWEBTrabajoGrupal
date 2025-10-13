@@ -1,0 +1,80 @@
+body{
+    background-color: #0c2227;
+    color: white;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: "Chakra Petch" , sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+}
+nav{
+    background-color: #16837e;
+    text-align: center;
+    border: 2px solid white;
+}
+nav a{
+    font-family: "Chakra Petch" , sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    margin: 35px;
+}
+nav a:visited{
+    color: grey;
+}
+nav a:hover{
+    color: red;
+}
+nav a:active{
+    color: orangered;
+}
+h2{
+    font-family: "Roboto Mono", monospace;
+    font-size: 35px;
+    font-style: normal;
+}
+p{
+    font-family: "Chakra Petch" , sans-serif;
+    font-size: 20px;
+}
+#Link::before{
+    content: "👉";
+}
+p > a{
+    color: #16837e;
+}
+#Gameplay{
+    text-align: center;
+}
+/* Párrafo con ayuda de ia para centrar el iframe */
+iframe {
+    display: block; 
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    font-style: normal;
+}
+ol li{
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    font-style: normal;   
+}
+/* Párrafo con ayuda de ia para centrar las img */
+ol img{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    color: #16837e;
+}
