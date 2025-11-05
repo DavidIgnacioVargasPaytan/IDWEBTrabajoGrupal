@@ -1,7 +1,40 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+
 body{
     background-color: #0c2227;
     color: white;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
 }
+
+header {
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #0c2227;
+    border-top: 2px solid #16837e;
+    padding: 15px;
+    text-align: center;
+}
+
+footer address {
+    font-family: "Chakra Petch" , sans-serif;
+    font-size: 14px;
+    color: grey;
+    font-style: normal;
+    margin: 5px 0;
+}
+
 h1{
     text-align: center;
     color: white;
@@ -9,72 +42,199 @@ h1{
     font-weight: 600;
     font-style: normal;
     font-size: 50px;
+    margin-bottom: 10px;
 }
+
+h2{
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+    color: #16837e;
+    font-size: 35px;
+    border-bottom: 2px solid #16837e;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: white; 
+    margin-top: 0;
+}
+
+p, dd, dt, table {
+    font-family: "Chakra Petch" , sans-serif;
+    font-size: 18px;
+}
+
 nav{
     background-color: #16837e;
     text-align: center;
     border: 2px solid white;
+    padding: 10px 0;
+    display: flex; 
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
 }
+
 nav a{
     font-family: "Chakra Petch" , sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    margin: 35px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
 }
+
 nav a:visited{
     color: grey;
 }
 nav a:hover{
     color: red;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 nav a:active{
     color: orangered;
 }
-h2{
-    font-family: "Roboto Mono", monospace;
-    font-size: 35px;
-    font-style: normal;
+
+.container-principal, .container-teorias {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+    margin-bottom: 40px;
 }
-p{
-    font-family: "Chakra Petch" , sans-serif;
+
+.info-lateral, .resumen-teorias {
+    background-color: rgba(22, 131, 126, 0.1); 
+    padding: 20px;
+    border: 1px solid #16837e;
+    border-radius: 5px;
+    align-self: start; 
+}
+
+.container-personajes, .container-finales, .container-objetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.personaje-item, .final-item, article {
+    background-color: #14363d; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #16837e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.personaje-item:hover, .final-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(22, 131, 126, 0.5);
+}
+
+.final-item figure {
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+.final-item img {
+    border: 3px solid white;
+    border-radius: 5px;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100% !important; 
+    height: auto !important;
+}
+
+dt {
+    color: #16837e;
+    font-weight: 700;
+    margin-top: 10px;
     font-size: 20px;
 }
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #16837e;
+    box-shadow: 0 0 10px rgba(22, 131, 126, 0.5);
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background-color: #16837e;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+
+tbody tr:hover {
+    background-color: rgba(22, 131, 126, 0.2);
+}
+
 #Link::before{
     content: "👉";
 }
 p > a{
     color: #16837e;
 }
+
 #Gameplay{
     text-align: center;
 }
-/* Párrafo con ayuda de ia para centrar el iframe */
 iframe {
-    display: block; 
-    width: 700px; 
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px; 
+    margin: 20px auto;
+    height: 400px; 
+    border: 3px solid #16837e;
 }
-h3{
-    font-family: "Roboto Mono", monospace;
-    font-size: 25px;
-    font-style: normal;
-}
-ol li{
-    font-family: "Roboto Mono", monospace;
-    font-size: 25px;
-    font-style: normal;   
-}
-/* Párrafo con ayuda de ia para centrar las img */
-ol img{
-    display: block; 
-    margin-left: auto;
-    margin-right: auto;
-}
-footer{
-    text-align: center;
-    padding: 20px;
-    color: #16837e;
+
+@media (max-width: 800px) {
+    .container-principal, .container-teorias {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
 }
