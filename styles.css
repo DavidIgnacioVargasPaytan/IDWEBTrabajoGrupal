@@ -137,14 +137,21 @@ nav a:active{
     font-size: 16px;
 }
 
-.container-personajes, .container-finales, .container-objetos {
+.container-personajes {
+display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+    margin-top: 40px;
+    margin: 0;
+}
+
+.container-finales, .container-objetos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 40px; 
     margin-top: 20px;
     margin-bottom: 40px;
 }
-
 /* parrafo generado con ayuda de IA */
 .personaje-item, 
 .final-item, 
