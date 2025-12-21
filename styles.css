@@ -142,6 +142,9 @@ main > article:not(.intro-objetos) {
     border-left: 5px solid #16837e; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .personaje-item:hover, 
@@ -152,24 +155,29 @@ main > article:not(.intro-objetos) {
     box-shadow: 0 10px 20px rgba(0, 243, 255, 0.15);
 }
 
-.final-item figure {
+.final-item figure,
+.personaje-item figure {
     margin: 20px 0 0 0;
     border: 2px solid var(--text-dim);
     padding: 5px;
     background: #000;
 }
 
-.final-item img {
+.final-item img,
+.personaje-item img {
     width: 100% !important;
-    height: 250px !important;
-    object-fit: cover;
+    height: 300px !important; 
+    object-fit: cover; 
+    object-position: top center;
     display: block;
     opacity: 0.9;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
-.final-item:hover img {
+.final-item:hover img,
+.personaje-item:hover img {
     opacity: 1;
+    transform: scale(1.02); 
 }
 
 dt {
