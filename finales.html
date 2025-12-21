@@ -7,122 +7,174 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="body-finales">
     <header>
         <h1>Guía de Supervivencia: No, I'm Not a Human</h1>
         <nav>
-            <a href="menu.html" class="active">Menu</a> <a href="origenes.html">Origenes</a>
+            <a href="menu.html">Menu</a>
+            <a href="origenes.html">Origenes</a>
             <a href="objetos.html">Objetos</a>
             <a href="personajes.html">Personajes</a>
-            <a href="finales.html">Finales</a>
+            <a href="finales.html" class="active">Finales</a>
         </nav>
     </header>
 
-    <main>
-        <h2 style="text-align: center; border: none;">REGISTRO DE LOS 10 DESENLACES</h2>
+    <main class="main-carrusel">
+        <h2 class="titulo-finales">REGISTRO DE LOS 10 DESENLACES</h2>
         
-        <div class="container-finales">
+        <div class="carousel-container">
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
 
-            <article class="final-item">
-                <h3>Final 1: El Niño de la Perdición</h3>
-                <p><em>"Has criado al fin de los tiempos."</em></p>
-                <p><strong>Condición:</strong> Dejar entrar a la Mujer Seductora. Encontrar al feto escondido tras su muerte y observar por la mirilla cómo se alimenta de un perro.</p>
-                <p>Descubres que has albergado el nacimiento de una abominación. La criatura te perdona la vida, pero sabes que el mundo está condenado por tu acción.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final1.jpg" alt="Final Niño de la Perdición" loading="lazy">
-                </figure>
-            </article>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
 
-            <article class="final-item">
-                <h3>Final 2: ¿El Fin?</h3>
-                <p><em>"El sol sale, pero ¿queda alguien para verlo?"</em></p>
-                <p><strong>Condición:</strong> Sobrevivir hasta el Día 14 asegurándote de que TODOS los inquilinos dentro de la casa sean 100% humanos (o estar completamente solo).</p>
-                <p>Al tapiar las ventanas el último día, el protagonista logra sobrevivir al mes de horror. Es el único final donde conservas tu humanidad y vida sin unirte a ninguna facción.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final2.jpg" alt="Final El Fin" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final1.jpg" alt="Final 1">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 1: El Niño de la Perdición</h3>
+                            <p class="quote">"Has criado al fin de los tiempos."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Dejar entrar a la Mujer Seductora, encontrar al feto y verlo alimentarse.</p>
+                                <p>Descubres que has albergado el nacimiento de una abominación. La criatura te perdona, pero el mundo está condenado.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 3: No, No Estoy Solo</h3>
-                <p><em>"Creíste que estabas a salvo. Te equivocaste."</em></p>
-                <p><strong>Condición:</strong> Llegar al Día 14 teniendo al menos a un Visitante vivo dentro de la casa.</p>
-                <p>Al tapiar las ventanas, la pantalla se oscurece. El Visitante que dejaste entrar revela su verdadera forma y te asesina. Es el final más común por descuido.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final3.jpg" alt="Final No Estoy Solo" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final2.jpg" alt="Final 2">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 2: ¿El Fin?</h3>
+                            <p class="quote">"El sol sale, pero ¿queda alguien para verlo?"</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Sobrevivir hasta el Día 14 con TODOS humanos o completamente solo.</p>
+                                <p>El único final donde conservas tu humanidad y vida sin unirte a ninguna facción extraña.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 4: ¡Que la Muerte nos Limpie de Nuestros Pecados!</h3>
-                <p><em>"La salvación no está en sobrevivir, sino en ascender."</em></p>
-                <p><strong>Condición:</strong> Permitir la entrada a los miembros del Culto y mantenerlos vivos hasta que su Líder regrese.</p>
-                <p>El Líder del Culto te invita a unirte. Aceptas ser "purificado" por los Visitantes, uniéndote al ritual colectivo de muerte voluntaria.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final4.jpg" alt="Final Culto" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final3.jpg" alt="Final 3">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 3: No, No Estoy Solo</h3>
+                            <p class="quote">"Creíste que estabas a salvo. Te equivocaste."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Llegar al Día 14 con al menos un Visitante vivo dentro.</p>
+                                <p>El Visitante revela su forma y te asesina. Es el final más común por descuido.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 5: Bienvenido a FEMA</h3>
-                <p><em>"El orden requiere sacrificio."</em></p>
-                <p><strong>Condición:</strong> Cooperar plenamente con los agentes de la AFAE (FEMA), entregando a los sujetos solicitados y aceptando sus sobornos.</p>
-                <p>Un agente nota tu eficiencia fría. Te ofrecen un puesto en la organización. El juego termina contigo vistiendo el traje de protección, listo para "limpiar" otras casas.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final5.jpg" alt="Final FEMA" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final4.jpg" alt="Final 4">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 4: ¡Purificados!</h3>
+                            <p class="quote">"La salvación no está en sobrevivir, sino en ascender."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Permitir la entrada al Culto y esperar al Líder.</p>
+                                <p>Aceptas ser "purificado" por los Visitantes, uniéndote al ritual de muerte voluntaria.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 6: Sí, Estoy Solo</h3>
-                <p><em>"Nunca debiste abrir esa puerta."</em></p>
-                <p><strong>Condición:</strong> En las noches que aparezca el Intruso (Pale Man), responde con la verdad: "Sí" cuando pregunte si estás solo.</p>
-                <p>Al confirmar tu vulnerabilidad, el Intruso entra inmediatamente y acaba con tu vida. No hay lucha, solo un corte abrupto a negro.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final6.jpg" alt="Final Si Estoy Solo" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final5.jpg" alt="Final 5">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 5: Bienvenido a FEMA</h3>
+                            <p class="quote">"El orden requiere sacrificio."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Cooperar con la AFAE y aceptar sobornos.</p>
+                                <p>Te unes a la organización. Terminas vistiendo el traje de protección, listo para "limpiar" otras casas.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 7: Sí, Soy un Asesino</h3>
-                <p><em>"La paranoia te convirtió en lo que juraste destruir."</em></p>
-                <p><strong>Condición:</strong> Matar a 4 o más humanos inocentes durante tu partida.</p>
-                <p>La culpa te consume o eres juzgado. El "Juez" aparece para ejecutarte por tus crímenes contra la humanidad, considerándote una amenaza peor que los propios Visitantes.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final7.jpg" alt="Final Asesino" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final6.jpg" alt="Final 6">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 6: Sí, Estoy Solo</h3>
+                            <p class="quote">"Nunca debiste abrir esa puerta."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Decirle la verdad ("Sí") al Intruso cuando pregunte.</p>
+                                <p>Al confirmar tu vulnerabilidad, el Intruso entra y acaba con tu vida instantáneamente.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 8: Seta o Perdición</h3>
-                <p><em>"Todo es uno en las esporas."</em></p>
-                <p><strong>Condición:</strong> Seguir las instrucciones del Hombre Hongo: Comer el hongo del sótano, luego la manzana y finalmente interactuar con el reloj.</p>
-                <p>Tu cuerpo es consumido por las esporas, pero tu mente viaja a una realidad psicodélica y colectiva. Te conviertes en parte de la flora del nuevo mundo.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final8.jpg" alt="Final Shroom or Doom" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final7.jpg" alt="Final 7">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 7: Sí, Soy un Asesino</h3>
+                            <p class="quote">"La paranoia te convirtió en monstruo."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Matar a 4 o más humanos inocentes.</p>
+                                <p>El "Juez" aparece para ejecutarte por tus crímenes contra la humanidad.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 9: Acepta lo Inevitable</h3>
-                <p><em>"Hay destinos peores que la muerte... o quizás mejores."</em></p>
-                <p><strong>Condición:</strong> Cavar en el sótano (Día 10), hablar con el Profeta Calvo y saltar al agujero siguiendo sus instrucciones.</p>
-                <p>Descubres una red de túneles bajo la casa y te encuentras con una entidad antigua (La Muerte). Aceptas tu destino lejos de la superficie, desapareciendo para siempre.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final9.jpg" alt="Final Acepta lo Inevitable" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final8.jpg" alt="Final 8">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 8: Seta o Perdición</h3>
+                            <p class="quote">"Todo es uno en las esporas."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Seguir las instrucciones del Hombre Hongo.</p>
+                                <p>Tu cuerpo es consumido, tu mente viaja a una realidad colectiva. Eres parte de la flora.</p>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="final-item">
-                <h3>Final 10: La Ira del Justiciero</h3>
-                <p><em>"Si no puedes vencer al monstruo, conviértete en el cazador."</em></p>
-                <p><strong>Condición:</strong> Fallar intencionalmente la prueba del Vigilante en el Día 10 o 12 (mostrando una parte del cuerpo con rasgos de Visitante).</p>
-                <p>El Vigilante te dispara, pero sobrevives y lo matas. Tomas su máscara y arma, convirtiéndote en el nuevo "Justiciero" paranoico que patrulla las calles.</p>
-                <figure>
-                    <img src="static/imagenes/finales/final10.jpg" alt="Final Ira del Justiciero" loading="lazy">
-                </figure>
-            </article>
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final9.jpg" alt="Final 9">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 9: Acepta lo Inevitable</h3>
+                            <p class="quote">"Hay destinos peores que la muerte."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Cavar en el sótano y seguir al Profeta Calvo.</p>
+                                <p>Te encuentras con una entidad antigua bajo tierra y desapareces para siempre.</p>
+                            </div>
+                        </div>
+                    </article>
 
+                    <article class="carousel-card">
+                        <div class="card-image">
+                            <img src="static/imagenes/finales/final10.jpg" alt="Final 10">
+                        </div>
+                        <div class="card-content">
+                            <h3>Final 10: La Ira del Justiciero</h3>
+                            <p class="quote">"Conviértete en el cazador."</p>
+                            <div class="card-details">
+                                <p><strong>Condición:</strong> Fallar la prueba del Vigilante y matarlo en defensa propia.</p>
+                                <p>Tomas su máscara y arma, convirtiéndote en el nuevo "Justiciero" paranoico.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+            
+            <div class="carousel-indicators">
+                <span id="slide-counter">1 / 10</span>
+            </div>
         </div>
     </main>
 
@@ -130,9 +182,9 @@
         <address>Contacto 1: dvargasp@unsa.edu.pe</address>
         <address>Contacto 2: jmacedoo@unsa.edu.pe</address>
         <address>Contacto 3: dcahuanac@unsa.edu.pe</address>
-        <p>&copy; 2025 Laboratorios IDWEB - Ghost Productions</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="finales.js"></script>
 </body>
 </html>

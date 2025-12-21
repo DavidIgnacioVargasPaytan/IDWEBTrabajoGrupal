@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("System initialized... Welcome, User.");
+    const currentLocation = window.location.href;
+    const menuItems = document.querySelectorAll('nav a');
+
+    menuItems.forEach(item => {
+        item.classList.remove('active');
+        if (currentLocation.includes(item.getAttribute('href'))) {
+            item.classList.add('active');
+        }
+    });
 
     const hiddenElements = document.querySelectorAll('article, section, .final-item, .personaje-item');
 
@@ -10,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.1 
+        threshold: 0.1
     });
 
     hiddenElements.forEach((el) => {
