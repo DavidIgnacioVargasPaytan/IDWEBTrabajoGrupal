@@ -1,27 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const currentLocation = window.location.href;
+    const currentPath = window.location.pathname.split("/").pop();
     const menuItems = document.querySelectorAll('nav a');
 
     menuItems.forEach(item => {
-        if (!item.classList.contains('btn-login-nav')) {
-            item.classList.remove('active');
-        }
-        if (currentLocation.includes(item.getAttribute('href'))) {
+        item.classList.remove('active');
+        
+        const linkHref = item.getAttribute('href');
+        
+        if (currentPath === linkHref || (currentPath === '' && linkHref === 'menu.html')) {
             item.classList.add('active');
         }
     });
 
-    const hiddenElements = document.querySelectorAll('article, section, .final-item, .personaje-item');
+    const hiddenElements = document.querySelectorAll('article, section, .final-item, .personaje-item, .objeto-card, .feature-card');
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                observer.unobserve(entry.target); 
             }
         });
-    }, { threshold: 0.1 });
+    }, { 
+        threshold: 0.15, 
+        rootMargin: "0px 0px -50px 0px" 
+    });
 
     hiddenElements.forEach((el) => {
-        el.classList.add('hidden-scroll');
+        el.classList.add('hidden-scroll'); 
         observer.observe(el);
     });
     
@@ -29,24 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const userName = localStorage.getItem('userName');
 
-    if (loginBtn) {
-        if (isLoggedIn) {
-            loginBtn.textContent = `CERRAR SESIÓN (${userName})`;
-            loginBtn.href = "#";
-            loginBtn.style.borderColor = "#ff3333"; 
-            loginBtn.style.color = "#ff3333";
-            loginBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                if(confirm("¿Desconectar del sistema?")) {
-                    localStorage.removeItem('isLoggedIn');
-                    localStorage.removeItem('userName');
-                    
-                    window.location.href = 'menu.html';
-                }
-            });
-        } else {
-            loginBtn.textContent = "ACCESO / REGISTRO";
-        }
+    if (loginBtn && isLoggedIn) {
+        loginBtn.innerHTML = `<i class="fa-solid fa-power-off"></i> CERRAR SESIÓN (${userName})`;
+        loginBtn.href = "#";
+        
+        loginBtn.style.borderColor = "#ff3333"; 
+        loginBtn.style.color = "#ff3333";
+        loginBtn.style.boxShadow = "0 0 10px rgba(255, 51, 51, 0.2)";
+
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if(confirm("¿CONFIRMAR DESCONEXIÓN DEL PROTOCOLO?")) {
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userName');
+                window.location.href = 'menu.html';
+            }
+        });
     }
 });
