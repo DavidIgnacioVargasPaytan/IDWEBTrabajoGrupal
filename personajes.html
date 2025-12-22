@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personajes - No I'm Not a Human</title>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,12 +16,13 @@
             <a href="objetos.html">Objetos</a>
             <a href="personajes.html" class="active">Personajes</a>
             <a href="finales.html">Finales</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main>
         <div class="container-personajes">
-            <h2>Base de Datos de Sujetos</h2>
+            <h2 class="titulo-personajes">Base de Datos de Sujetos</h2>
             
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">Todos</button>
@@ -32,787 +32,724 @@
                 <button class="filter-btn" data-filter="desconocido">???</button>
             </div>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>VECINO</h3>
-                <p>El Vecino es el primer y único personaje que aparece en la primera noche en todos los lanzamientos actuales del juego, actuando como un tutorial para el jugador, que se puede omitir después de la primera partida.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/vecino.png" alt="Vecino" loading="lazy">
-                </figure>
-            </article>
+            <div class="personajes-grid">
 
-            <article class="personaje-item" data-category="humano">
-                <h3>NIÑA PEQUEÑA</h3>
-                <p>La Niña hace una breve aparición en la segunda noche y es el segundo personaje que aparece en la quinta noche en todos los lanzamientos del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/nina-pequena.png" alt="niña Pequeña" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/vecino.png" alt="Vecino" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>VECINO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>El primer y único personaje que aparece en la primera noche. Actúa como tutorial.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>HOMBRE ALTO</h3>
-                <p>El hombre Alto es el primer personaje que aparece la segunda noche en todas las versiones actuales del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/hombre-alto.png" alt="Hombre Alto" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/nina-pequena.png" alt="niña Pequeña" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>NIÑA PEQUEÑA</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Breve aparición en la segunda noche y segundo personaje en la quinta noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>CAJERA</h3>
-                <p>La cajera es el segundo personaje que aparece en la segunda noche en todos los lanzamientos actuales del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/cajera.png" alt="Cajera" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/hombre-alto.png" alt="Hombre Alto" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE ALTO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Primer personaje que aparece la segunda noche en todas las versiones.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>CHICO DEL ABRIGO</h3>
-                <p>El Chico del Abrigo es el primer personaje que tiene una probabilidad aleatoria de aparecer a partir de la segunda noche del lanzamiento completo, y está previsto que aparezca en la tercera noche del lanzamiento de la demostración VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/chico-abrigo.png" alt="Chico Abrigo" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/cajera.png" alt="Cajera" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CAJERA</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Segundo personaje que aparece en la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>MUJER VIUDA</h3>
-                <p>La Viuda es un personaje que aparece aleatoriamente después de la segunda noche. De lo contrario, aparece como el segundo personaje en la cuarta noche en la versión demo VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/viuda.png" alt="Viuda" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/chico-abrigo.png" alt="Chico Abrigo" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO DEL ABRIGO</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Probabilidad aleatoria a partir de la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO DEL SOL</h3>
-                <p>El Chico del Sol es un personaje que aparece aleatoriamente después de la segunda noche. De lo contrario, aparece como el segundo personaje en la tercera noche en la demo VHS del juego. Si el Protagonista le da una cerveza cuando se la pide, recompensará al jugador con otro objeto a cambio.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/chico-sol.png" alt="Chico del Sol" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/viuda.png" alt="Viuda" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MUJER VIUDA</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Aparece aleatoriamente después de la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO AMOGUS</h3>
-                <p>El Amogus Guy es un personaje que aparece aleatoriamente después de la segunda noche. De lo contrario, aparece como el tercer personaje en la cuarta noche en la versión demo VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/amogus.png" alt="Chico Amogus" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/chico-sol.png" alt="Chico del Sol" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO DEL SOL</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Si le das una cerveza, te recompensará con otro objeto.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CIRUJANO</h3>
-                <p>El Cirujano es un personaje que aparece en la versión completa. En la demo VHS del juego, es el cuarto personaje de la cuarta noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/cirujano.png" alt="Cirujano" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/amogus.png" alt="Chico Amogus" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO AMOGUS</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece aleatoriamente después de la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>AGENTE DE LA AFAE</h3>
-                <p>El Agente de AFAE es un personaje presente en el juego. Es uno de los muchos personajes presentes en las tres versiones actuales.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/agente-AFAE.png" alt="Agente AFAE" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/cirujano.png" alt="Cirujano" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CIRUJANO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa. Cuarto personaje de la noche 4 en demo.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>MAMÁ GRANDE</h3>
-                <p>Mamá Grande es un personaje que aparece en la versión completa del juego. En la demo VHS , es el cuarto personaje que aparece en la quinta noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/mama.png" alt="mama" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/agente-AFAE.png" alt="Agente AFAE" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>AGENTE DE LA AFAE</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Uno de los muchos personajes presentes en las tres versiones.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>BABUSHKA</h3>
-                <p>Babushka es un personaje que aparece como segundo personaje en la sexta noche. También aparece como un huevo de Pascua de una mujer fantasmal sentada en el sillón reclinable de la sala de estar del protagonista en la versión antológica del juego Violent Horror Stories .</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/babushka.png" alt="babushka" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/mama.png" alt="mama" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MAMÁ GRANDE</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Aparece en la versión completa. Cuarto personaje en la quinta noche (Demo).</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CAZADOR BARBUDO</h3>
-                <p>El Cazador Barbudo es un personaje que tiene una probabilidad aleatoria de aparecer después de la segunda noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/cazador.png" alt="cazador" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/babushka.png" alt="babushka" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>BABUSHKA</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Segundo personaje en la sexta noche. Easter egg en VHS.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="desconocido">
-                <h3>PROFETA</h3>
-                <p>El Profeta es el tercer personaje que aparece en la cuarta noche. De lo contrario, aparece como el segundo personaje en la tercera y sexta noche en la versión demo VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Desconocido</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/profeta.png" alt="profeta" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/cazador.png" alt="cazador" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CAZADOR BARBUDO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Probabilidad aleatoria de aparecer después de la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>REPARTIDOR</h3>
-                <p>El Repartidor es un personaje que aparece por las noches tras un pedido en For Rest . Llega a casa del protagonista con el paquete solicitado, lo entrega y mantiene una breve conversación antes de marcharse.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/repartidor.png" alt="repartidor" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="desconocido">
+                    <figure>
+                        <img src="static/imagenes/personajes/profeta.png" alt="profeta" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>PROFETA</h3>
+                        <span class="badge desconocido">Desconocido</span>
+                        <p>Tercer personaje en la cuarta noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>VISITANTE PÁLIDO</h3>
-                <p>El Visitante Pálido es un personaje que aparece en la tercera noche como primer personaje. De lo contrario, aparece en la tercera y quinta noche como primer personaje en la versión demo VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/visitante.png" alt="visitante" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/repartidor.png" alt="repartidor" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>REPARTIDOR</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Aparece tras un pedido en For Rest. Entrega paquetes.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>SEÑOR DE TRAJE</h3>
-                <p>The Señor de Traje es un personaje que aparece en una noche aleatoria en el lanzamiento completo y en la quinta noche en la versión de demostración VHS del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/señor-traje.png" alt="señor de traje" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/visitante.png" alt="visitante" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>VISITANTE PÁLIDO</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Aparece en la tercera noche como primer personaje.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MUJER SEDUCTORA</h3>
-                <p>La Mujer Seductora es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/mujer-seductora.png" alt="mujer seductora" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/señor-traje.png" alt="señor de traje" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>SEÑOR DE TRAJE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en una noche aleatoria en el lanzamiento completo.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>LAS HERMANAS</h3>
-                <p>Las Hermanas son dos personajes que aparecen aleatoriamente después de la segunda noche en la demo de Steam. A diferencia de los invitados normales , aparecen como un solo personaje, pero en realidad son dos invitados distintos al entrar en la casa del jugador, lo que requerirá mucha energía para comprobar si hay señales de ser visitantes .</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/hermanas.png" alt="hermanas" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/mujer-seductora.png" alt="mujer seductora" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MUJER SEDUCTORA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa del juego.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO ENOJADO</h3>
-                <p>El tipo enojado es un personaje que tiene una probabilidad aleatoria de aparecer después de la segunda noche en el lanzamiento de la demostración de Steam del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/enojado.png" alt="chico enojado" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/hermanas.png" alt="hermanas" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>LAS HERMANAS</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Dos personajes que cuentan como uno. Requiere mucha energía comprobarlas.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MEJOR HIJO</h3>
-                <p>El Mejor Hijo es un personaje que tiene una probabilidad aleatoria de aparecer en el lanzamiento completo del juego después de la noche 8. Afirma que no tiene idea de lo que está pasando, ya que sus padres lo abandonaron y se fueron.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/best-son.png" alt="best-son" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/enojado.png" alt="chico enojado" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO ENOJADO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Probabilidad aleatoria después de la segunda noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>MUJER DEL GATO</h3>
-                <p>La Mujer del Gato es un personaje que aparece en la versión completa del juego. Su presencia es anunciada por el Hombre Profético durante su diálogo con el Protagonista . Permitirle entrar a la casa es la única forma de desbloquear el acceso al Sótano y obtener al Gato . Es posible que ella y el Gato aparezcan juntos en la introducción.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/mujer-gato.png" alt="mujer-gato" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/best-son.png" alt="best-son" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MEJOR HIJO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece después de la noche 8. Sus padres lo abandonaron.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ADOLESCENTE SIN PADRES</h3>
-                <p>El adolescente sin padres es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/huerfana.png" alt="huerfana" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/mujer-gato.png" alt="mujer-gato" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MUJER DEL GATO</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Única forma de desbloquear el acceso al Sótano y obtener al Gato.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>HOMBRE CIEGO</h3>
-                <p>El Hombre Ciego es un personaje que aparece en la versión completa del juego, sentado a la mesa de la cocina. Afirma haberse arrancado los ojos y haber recurrido a la automutilación tras presenciar el horror de los visitantes. Más concretamente, la entidad a la que llama ESO . Expresa cierto anhelo por volver a ver, pero no parece tan molesto como algunos podrían esperar.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/ciego.png" alt="ciego" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/huerfana.png" alt="huerfana" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ADOLESCENTE SIN PADRES</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>STAND UP GUY</h3>
-                <p>The Stand Up Guy es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/standup.png" alt="standup" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/ciego.png" alt="ciego" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE CIEGO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Se arrancó los ojos tras presenciar el horror de "ESO".</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MARIDO Y MUJER</h3>
-                <p>El esposo y la esposa son dos personas que se consideran un solo personaje y pueden llamar a la puerta del protagonista cualquier noche. No pueden separarse y solo ocupan un lugar en la casa, ya que solo se puede interactuar con el esposo.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/esposos.png" alt="esposos" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/standup.png" alt="standup" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>STAND UP GUY</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>PEONES DEL CULTO A LA MUERTE</h3>
-                <p>Los Peones del Culto a la Muerte son un grupo de personajes que aparecen en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/cultista.png" alt="cultista" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/esposos.png" alt="esposos" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MARIDO Y MUJER</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Cuentan como un solo personaje. Solo se interactúa con el esposo.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>LÍDER DEL CULTO A LA MUERTE</h3>
-                <p>El líder del culto es un personaje que aparece en la puerta del protagonista .</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/lider-culto.png" alt="lider culto" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/cultista.png" alt="cultista" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>PEONES DEL CULTO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Grupo de personajes del Culto a la Muerte.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>FUMETA</h3>
-                <p>El líder del culto es un personaje que aparece en la puerta del protagonista .</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/fumeta.png" alt="fumeta" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/lider-culto.png" alt="lider culto" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>LÍDER DEL CULTO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Líder fanático que aparece en tu puerta.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ROMÁNTICO MORBOSO</h3>
-                <p>El Romántico Morboso es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/romantico.png" alt="romantico" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/fumeta.png" alt="fumeta" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>FUMETA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje aleatorio.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>EXMINISTRO</h3>
-                <p>El Exministro es un personaje que aparece en la versión completa del juego. Es posible encontrarlo al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/exministro.png" alt="exministro" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/romantico.png" alt="romantico" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ROMÁNTICO MORBOSO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>BOMBERO DESFIGURADO</h3>
-                <p>El bombero desfigurado es un personaje masculino que siempre aparece como segundo personaje en la tercera noche en el lanzamiento de la demostración de Steam del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/bombero.png" alt="bombero" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/exministro.png" alt="exministro" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>EXMINISTRO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Posible encontrarlo al revisar la puerta por la noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>WIREFACE</h3>
-                <p>Wireface es un personaje que aparece en la versión completa del juego. Es posible encontrarlo al revisar la puerta por la noche. Si se le invita a entrar a la casa, ocupará el extremo izquierdo del Trastero , apoyado contra uno de los estantes, compartiendo espacio con el Cirujano y el Chico Escalofriante .</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/wireface.png" alt="wireface" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/bombero.png" alt="bombero" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>BOMBERO DESFIGURADO</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Segundo personaje en la tercera noche (Demo).</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>MAN IN HAZMAT</h3>
-                <p>Man in Hazmat Peligrosos es un personaje que aparece en la versión completa del juego. Su noche de debut es, por ahora, aleatoria.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/hazmat.png" alt="hazmat" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/wireface.png" alt="wireface" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>WIREFACE</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Si entra, ocupará el Trastero junto al Cirujano.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ADIVINA</h3>
-                <p>La Adivina es un personaje femenino en No, no soy humana . Aparece por primera vez en la demo actualizada lanzada durante el Steam Next Fest 2025.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/adivina.png" alt="adivina" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/hazmat.png" alt="hazmat" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MAN IN HAZMAT</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Su noche de debut es aleatoria.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>HOMBRE HERIDO</h3>
-                <p>El Hombre Herido es un posible invitado que se puede encontrar en la puerta a partir de la noche 8. Es uno de los muchos personajes que debutaron con el lanzamiento completo del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/herido.png" alt="herido" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/adivina.png" alt="adivina" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ADIVINA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece por primera vez en la demo del Steam Next Fest 2025.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>SEPULTURERO</h3>
-                <p>El Sepulturero es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/sepulturero.png" alt="sepulturero" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/herido.png" alt="herido" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE HERIDO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Puede encontrarse en la puerta a partir de la noche 8.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>INSOMNE</h3>
-                <p>El Insomne es un personaje que aparece en la versión completa del juego. Tiene la posibilidad de aparecer a partir de la noche 8.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/insomne.png" alt="insomne" loading="lazy">
-                </figure>
-            </article>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/sepulturero.png" alt="sepulturero" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>SEPULTURERO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>VAGABUNDO</h3>
-                <p>El vagabundo es un personaje que aparece en la versión completa del juego. Es posible encontrarlo al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/vagabundo.png" alt="vagabundo" loading="lazy">
-                </figure>
-            </article>      
-            
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MAMÁ IRRESPONSABLE</h3>
-                <p>La Madre Incumplidora , conocida internamente como la Madre , es un personaje que aparece en la versión completa del juego y en la segunda demo. Puede aparecer entre la noche 1 y la noche 7.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/madre-irresponsable.png" alt="madre irresponsable" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/insomne.png" alt="insomne" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>INSOMNE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Tiene la posibilidad de aparecer a partir de la noche 8.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MONJA</h3>
-                <p>La Monja es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/monja.png" alt="monja" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/vagabundo.png" alt="vagabundo" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>VAGABUNDO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Posible encontrarlo al revisar la puerta por la noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ABOGADO DEL SILLON</h3>
-                <p>El abogado de sillón es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/abogado.png" alt="abogado" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/madre-irresponsable.png" alt="madre irresponsable" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MAMÁ IRRESPONSABLE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Puede aparecer entre la noche 1 y la noche 7.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO DE LA BANDANA</h3>
-                <p>El Chico de la Bandana es un personaje que aparece en la versión completa del juego. Su aparición es aleatoria después de la segunda noche. Se acerca a la puerta con un saludo amistoso y luego pide ayuda para aprender a luchar.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/bandana.png" alt="bandana" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/monja.png" alt="monja" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MONJA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>TAXISTA</h3>
-                <p>El Taxi Driver es un personaje que aparece aleatoriamente en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/taxista.png" alt="taxista" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/abogado.png" alt="abogado" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ABOGADO DEL SILLÓN</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>MAESTRA DE KINDER</h3>
-                <p>La Maestra de Kinder de infantes es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/maestra-kinder.png" alt="maestra kinder" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/bandana.png" alt="bandana" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO DE LA BANDANA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Pide ayuda para aprender a luchar.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CONSPIRANOICO</h3>
-                <p>El Conspiranoico es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/conspiranoico.png" alt="conspiranoico" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/taxista.png" alt="taxista" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>TAXISTA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece aleatoriamente en la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="humano">
-                <h3>VIGILANTE</h3>
-                <p>El Vigilante es un personaje que aparece en la versión completa del juego. No es un personaje invitado, ya que no está interesado en refugiarse en la casa del Protagonista.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Humano</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/vigilante.png" alt="vigilante" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/maestra-kinder.png" alt="maestra kinder" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MAESTRA DE KINDER</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO DE LA SILLA DE RUEDAS</h3>
-                <p>El chico de la silla de ruedas es un personaje que tiene una probabilidad aleatoria de aparecer a partir de la noche 8.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/lisiado.png" alt="lisiado" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/conspiranoico.png" alt="conspiranoico" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CONSPIRANOICO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ESPOSA DE LA AFAE</h3>
-                <p>La esposa de FEMA es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/esposa-afae.png" alt="esposa-AFAE" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="humano">
+                    <figure>
+                        <img src="static/imagenes/personajes/vigilante.png" alt="vigilante" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>VIGILANTE</h3>
+                        <span class="badge humano">Siempre Humano</span>
+                        <p>No busca refugio, solo vigila.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="desconocido">
-                <h3>DEVORADOR DE HONGOS</h3>
-                <p>El Devorador de Hongos es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Desconocido</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/devorador.png" alt="devorador" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/lisiado.png" alt="lisiado" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO EN SILLA DE RUEDAS</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Probabilidad aleatoria a partir de la noche 8.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="visitante">
-                <h3>HOMBRE INMORTAL</h3>
-                <p>El Hombre Inmortal es un personaje que aparece en la versión completa del juego y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Siempre Visitante</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/inmortal.png" alt="inmortal" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/esposa-afae.png" alt="esposa-AFAE" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ESPOSA DE LA AFAE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="desconocido">
-                <h3>NIÑO DE IMPERMEABLE</h3>
-                <p>El Niño de Impermeable es un personaje que aparece en la versión completa del juego. No es un invitado, pero tampoco un personaje predefinido, ya que puede aparecer de repente cualquier día.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Desconocido</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/impermeable.png" alt="impermeable" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="desconocido">
+                    <figure>
+                        <img src="static/imagenes/personajes/devorador.png" alt="devorador" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>DEVORADOR DE HONGOS</h3>
+                        <span class="badge desconocido">Desconocido</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>HOMBRE ALEGRE</h3>
-                <p>El Hombre Alegre es un personaje que aparece en la versión completa del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/hombre-alegre.png" alt="hombre alegre" loading="lazy">
-                </figure>
-            </article>   
+                <article class="personaje-item" data-category="visitante">
+                    <figure>
+                        <img src="static/imagenes/personajes/inmortal.png" alt="inmortal" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE INMORTAL</h3>
+                        <span class="badge visitante">Siempre Visitante</span>
+                        <p>Puede encontrarse al revisar la puerta por la noche.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>MUJER TATUADA</h3>
-                <p>Mujer Tatuada es un personaje que aparece en la primera actualización del juego, y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/tatuada.png" alt="tatuada" loading="lazy">
-                </figure>
-            </article>  
+                <article class="personaje-item" data-category="desconocido">
+                    <figure>
+                        <img src="static/imagenes/personajes/impermeable.png" alt="impermeable" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>NIÑO DE IMPERMEABLE</h3>
+                        <span class="badge desconocido">Desconocido</span>
+                        <p>Puede aparecer de repente cualquier día.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>THEATER KID</h3>
-                <p>Theater Kid es un personaje que aparece en la primera actualización del juego y que suele aparecer al revisar la puerta por la noche. Está basado en uno de los patrocinadores del juego en Patreon.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/theater.png" alt="theater" loading="lazy">
-                </figure>
-            </article>  
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/hombre-alegre.png" alt="hombre alegre" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE ALEGRE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Personaje de la versión completa.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>HOMBRE EN ROPA INTERIOR</h3>
-                <p>El Hombre en Ropa Interior es un personaje invitado que apareció en la primera actualización del juego, y que puede encontrarse al revisar la puerta por la noche. Está basado en un fan del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/semidesnudo.png" alt="semidesnudo" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/tatuada.png" alt="tatuada" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>MUJER TATUADA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la primera actualización del juego.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>FANATICO DE LOS CUENTOS DE HADAS</h3>
-                <p>El Fanático de los Cuentos de Hadas es un personaje que aparece en la primera actualización del juego y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/fanatico-cuentos.png" alt="fanatico cuentos" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/theater.png" alt="theater" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>THEATER KID</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Basado en uno de los patrocinadores de Patreon.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>DEUDOR</h3>
-                <p>El Deudor es un personaje que aparece en la primera actualización del juego, y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/deudor.png" alt="deudor" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/semidesnudo.png" alt="semidesnudo" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>HOMBRE EN ROPA INTERIOR</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Basado en un fan del juego.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>FUGITIVO UNIVERSITARIO</h3>
-                <p>El Fugitivo Universitario es un personaje invitado que apareció en la primera actualización del juego, Sospechosos Habituales , y que puede encontrarse al revisar la puerta por la noche. Está basado en uno de los patrocinadores del juego en Patreon/Boosty.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/fugitivo.png" alt="fugitivo" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/fanatico-cuentos.png" alt="fanatico cuentos" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>FANÁTICO DE CUENTOS</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la primera actualización.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>EL LEPROSO</h3>
-                <p>El Leproso es un personaje que aparece en la primera actualización del juego, Sospechosos habituales , y tiene la posibilidad de encontrarlo al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/leproso.png" alt="leproso" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/deudor.png" alt="deudor" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>DEUDOR</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la primera actualización.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>CHICO ESPELUZNANTE</h3>
-                <p>El Chico Espeluznante es un personaje que puede entrar a la casa. Es un personaje muy escalofriante, incómodo y extraño. Está basado en el arte conceptual de uno de los seguidores de Patreon del juego.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/chico-espeluznante.png" alt="chico espeluznante" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/fugitivo.png" alt="fugitivo" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>FUGITIVO UNIVERSITARIO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Basado en un patrocinador de Patreon.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>GRAYSCALE ROCK-STAR</h3>
-                <p>Grayscale Rock-Star es un personaje invitado que apareció en la primera actualización del juego y que se puede encontrar al revisar la puerta por la noche. Está basado en uno de los patrocinadores del juego en Patreon.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/rockstar.png" alt="rockstar" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/leproso.png" alt="leproso" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>EL LEPROSO</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la actualización "Sospechosos Habituales".</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>PUNK GIRL</h3>
-                <p>Punk Girl es un personaje que aparece en la primera actualización del juego, y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/punk-girl.png" alt="punk girl" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/chico-espeluznante.png" alt="chico espeluznante" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>CHICO ESPELUZNANTE</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Muy escalofriante e incómodo.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>TURISTA</h3>
-                <p>El Turista es un personaje que aparece en la primera actualización del juego, y que puede encontrarse al revisar la puerta por la noche.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/turista.png" alt="turista" loading="lazy">
-                </figure>
-            </article> 
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/rockstar.png" alt="rockstar" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>GRAYSCALE ROCK-STAR</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Basado en un patrocinador de Patreon.</p>
+                    </div>
+                </article>
 
-            <article class="personaje-item" data-category="aleatorio">
-                <h3>ADICTO A ENERJEKA</h3>
-                <p>El Adicto a EnerJeka es un invitado que apareció en la primera actualización del juego, Sospechosos Habituales , y que suele aparecer al revisar la puerta por la noche. Está basado en uno de los patrocinadores del juego en Patreon/Boosty.</p>
-                <dl>
-                    <dt>Humano o Visitante:</dt>
-                    <dd>Aleatorio</dd>
-                </dl>
-                <figure>
-                    <img src="static/imagenes/personajes/adicto-enerjeka.png" alt="adicto enerjeka" loading="lazy">
-                </figure>
-            </article> 
-        
-        </div>
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/punk-girl.png" alt="punk girl" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>PUNK GIRL</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la primera actualización.</p>
+                    </div>
+                </article>
+
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/turista.png" alt="turista" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>TURISTA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Aparece en la primera actualización.</p>
+                    </div>
+                </article>
+
+                <article class="personaje-item" data-category="aleatorio">
+                    <figure>
+                        <img src="static/imagenes/personajes/adicto-enerjeka.png" alt="adicto enerjeka" loading="lazy">
+                    </figure>
+                    <div class="personaje-info">
+                        <h3>ADICTO A ENERJEKA</h3>
+                        <span class="badge aleatorio">Aleatorio</span>
+                        <p>Basado en un patrocinador.</p>
+                    </div>
+                </article>
+
+            </div> </div>
     </main>
     
     <footer>
