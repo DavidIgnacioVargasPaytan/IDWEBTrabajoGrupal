@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - No I'm Not a Human</title>
+    <link rel="icon" href="static/imagenes/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Protocolo de Supervivencia</h1>
         <nav>
-            <a href="menu.html" class="active">Menu</a>
-            <a href="origenes.html">Origenes</a>
-            <a href="objetos.html">Objetos</a>
-            <a href="personajes.html">Personajes</a>
-            <a href="finales.html">Finales</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="menu.html" class="active">
+                <i class="fa-solid fa-house-medical"></i> MENU
+            </a>
+            <a href="origenes.html">
+                <i class="fa-solid fa-dna"></i> ORIGENES
+            </a>
+            <a href="objetos.html">
+                <i class="fa-solid fa-cube"></i> OBJETOS
+            </a>
+            <a href="personajes.html">
+                <i class="fa-solid fa-user-secret"></i> PERSONAJES
+            </a>
+            <a href="finales.html">
+                <i class="fa-solid fa-skull"></i> FINALES
+            </a>
+            <a href="contacto.html">
+                <i class="fa-solid fa-tower-broadcast"></i> CONTACTO
+            </a>
+            <a href="login.html" class="btn-login-nav">
+                <i class="fa-solid fa-fingerprint"></i> ACCESO / REGISTRO
+            </a>
         </nav>
     </header>
 
@@ -27,7 +44,8 @@
             
             <div class="hero-actions">
                 <a href="https://store.steampowered.com/app/3180070/No_Im_not_a_Human/" target="_blank" class="btn-steam">
-                    <span class="steam-icon">⚡</span> JUGAR EN STEAM
+                    <svg class="steam-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.979 0C5.668 0 .506 4.887.036 11.084l6.19 2.555c.29-.427.732-.733 1.246-.838l1.79-2.62s-.036-3.834 3.738-3.834c3.483 0 3.773 3.325 3.664 3.943-.327 1.854-3.053 2.145-3.053 2.145l-1.345 1.963c-.073 1.345-1.09 2.472-2.472 2.654l-2.617 3.854c1.49.545 3.126.854 4.835.854 6.626 0 11.999-5.372 11.999-11.999S18.605 0 11.979 0zM4.908 14.76l-3.345-1.38c.654 2.217 2.108 4.108 4.072 5.38.363-2.072 1.963-3.708 4.071-4.072l-2.617-3.817c-1.309.836-2.145 2.29-2.181 3.89zm4.29 2.109a2.327 2.327 0 1 1 0-4.653 2.327 2.327 0 0 1 0 4.653zm0-.836a1.49 1.49 0 1 0 0-2.981 1.49 1.49 0 0 0 0 2.981z"/></svg>
+                    JUGAR EN STEAM
                 </a>
                 <a href="#Sinopsis" class="btn-outline">INICIAR LECTURA</a>
             </div>
@@ -57,26 +75,39 @@
         <section id="Caracteristicas" class="features-section">
             <h2 class="section-title">CARACTERÍSTICAS PRINCIPALES</h2>
             <div class="features-grid">
+                
                 <div class="feature-card">
-                    <div class="icon">👁️</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
                     <h4>Terror Psicológico</h4>
                     <p>Atmósfera opresiva que te mantendrá en tensión constante.</p>
                 </div>
+
                 <div class="feature-card">
-                    <div class="icon">🔀</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+                    </div>
                     <h4>10 Finales</h4>
                     <p>Tus decisiones importan. Descubre cada desenlace posible.</p>
                 </div>
+
                 <div class="feature-card">
-                    <div class="icon">🧩</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.439 15.424a1 1 0 0 0-1.424-1.424l-3.327 3.327a3.003 3.003 0 0 1-2.122.879 3.003 3.003 0 0 1-2.12-.879l-3.328-3.327a1 1 0 0 0-1.414 1.414l3.328 3.328a5.005 5.005 0 0 0 3.535 1.464 5.006 5.006 0 0 0 3.536-1.464l3.336-3.318z"/><path d="M4.561 8.576a1 1 0 0 0 1.424 1.424l3.327-3.327a3.003 3.003 0 0 1 2.122-.879 3.003 3.003 0 0 1 2.12.879l3.328 3.327a1 1 0 0 0 1.414-1.414l-3.328-3.328a5.005 5.005 0 0 0-3.535-1.464 5.006 5.006 0 0 0-3.536 1.464L4.561 8.576z"/></svg>
+                    </div>
                     <h4>Puzzles Complejos</h4>
                     <p>Desafía tu mente con acertijos que ocultan la verdad.</p>
                 </div>
+
                 <div class="feature-card">
-                    <div class="icon">📖</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
                     <h4>Narrativa Profunda</h4>
                     <p>Una historia misteriosa que cuestiona tu propia humanidad.</p>
                 </div>
+
             </div>
         </section>
 

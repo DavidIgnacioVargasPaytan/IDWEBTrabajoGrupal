@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Sistema - No I'm Not a Human</title>
+    <link rel="icon" href="static/imagenes/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Protocolo de Seguridad</h1>
+        <nav>
+            <a href="menu.html" class="active">
+                <i class="fa-solid fa-house-medical"></i> MENU
+            </a>
+            <a href="origenes.html">
+                <i class="fa-solid fa-dna"></i> ORIGENES
+            </a>
+            <a href="objetos.html">
+                <i class="fa-solid fa-cube"></i> OBJETOS
+            </a>
+            <a href="personajes.html">
+                <i class="fa-solid fa-user-secret"></i> PERSONAJES
+            </a>
+            <a href="finales.html">
+                <i class="fa-solid fa-skull"></i> FINALES
+            </a>
+            <a href="contacto.html">
+                <i class="fa-solid fa-tower-broadcast"></i> CONTACTO
+            </a>
+            <a href="login.html" class="btn-login-nav">
+                <i class="fa-solid fa-fingerprint"></i> ACCESO / REGISTRO
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-auth">
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="tab-login">INICIAR SESIÓN</button>
+                <button class="tab-btn" id="tab-register">NUEVO REGISTRO</button>
+            </div>
+
+            <div class="auth-content">
+                <form id="form-login" class="auth-form active">
+                    <div class="terminal-icon">🔒</div>
+                    <h3>VERIFICACIÓN DE IDENTIDAD</h3>
+                    <p class="auth-status">Esperando credenciales...</p>
+
+                    <div class="form-group">
+                        <label for="login-email">CORREO / ID:</label>
+                        <input type="email" id="login-email" placeholder="usuario@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-pass">CLAVE DE ACCESO:</label>
+                        <input type="password" id="login-pass" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit btn-full">ACCEDER AL SISTEMA</button>
+                    <p class="form-footer">¿Olvidó su clave? Contacte a la AFAE.</p>
+                </form>
+
+                <form id="form-register" class="auth-form hidden">
+                    <div class="terminal-icon">🧬</div>
+                    <h3>REGISTRO DE NUEVO SUJETO</h3>
+                    <p class="auth-status">Creando nuevo expediente...</p>
+
+                    <div class="form-group">
+                        <label for="reg-name">ALIAS / NOMBRE:</label>
+                        <input type="text" id="reg-name" placeholder="Sujeto #..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email">CORREO ELECTRÓNICO:</label>
+                        <input type="email" id="reg-email" placeholder="contacto@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-pass">CLAVE DE ACCESO:</label>
+                        <input type="password" id="reg-pass" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-confirm">CONFIRMAR CLAVE:</label>
+                        <input type="password" id="reg-confirm" placeholder="Repita su clave" required>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="human-check" required>
+                        <label for="human-check">Declaro que SOY HUMANO (Protocolo de Verdad)</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit btn-full">CREAR EXPEDIENTE</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <address>Contacto 1: dvargasp@unsa.edu.pe</address>
+        <address>Contacto 2: jmacedoo@unsa.edu.pe</address>
+        <address>Contacto 3: dcahuanac@unsa.edu.pe</address>
+        <p>&copy; 2025 Laboratorios IDWEB - Ghost Productions</p>
+    </footer>
+
+    <script src="script.js"></script> 
+    <script src="script.js"></script> <script src="auth.js"></script>
+</body>
+</html>

@@ -63,6 +63,27 @@ nav a {
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a i {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                filter 0.3s ease;
+    color: #888;
+}
+
+nav a:hover i {
+    transform: translateX(6px) scale(1.1);
+    color: #fff;
+    filter: drop-shadow(0 0 8px var(--color-neon-primary));
+}
+
+nav a.active i {
+    color: var(--color-neon-primary);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px var(--color-neon-primary));
 }
 
 nav a:hover, nav a.active {
@@ -93,10 +114,8 @@ nav a:hover, nav a.active {
     position: relative;
     overflow: hidden;
     border-bottom: 2px solid var(--color-neon-primary);
-
     background: linear-gradient(rgba(0, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
                 url('static/imagenes/portada.jpg'); 
-    
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; 
@@ -179,6 +198,20 @@ nav a:hover, nav a.active {
 .btn-outline:hover {
     background: rgba(0, 255, 255, 0.1);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.steam-icon {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.btn-steam:hover .steam-icon {
+    fill: var(--color-neon-primary);
+    filter: drop-shadow(0 0 5px var(--color-neon-primary));
 }
 
 .main-home {
@@ -269,7 +302,22 @@ nav a:hover, nav a.active {
 .feature-card .icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: inline-block;
+}
+
+.feature-card .icon svg {
+    width: 60px;
+    height: 60px;
+    stroke: var(--color-neon-primary);
+    fill: none;
+    filter: drop-shadow(0 0 8px var(--color-neon-primary));
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover .icon svg {
+    stroke: #fff;
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 15px var(--color-neon-primary));
 }
 
 .feature-card h4 {
@@ -1141,4 +1189,179 @@ footer address:hover {
         min-width: 85vw;
         margin-right: 10px;
     }
+}
+
+.main-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at center, rgba(0, 30, 30, 0.4), rgba(0,0,0,0.9));
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(5, 5, 5, 0.95);
+    border: 1px solid var(--color-neon-primary);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-tabs {
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: #666;
+    font-family: var(--font-titulo);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--color-neon-primary);
+    border-bottom: 2px solid var(--color-neon-primary);
+}
+
+.auth-content {
+    padding: 2rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    display: none;
+}
+
+.auth-form.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.auth-form.hidden {
+    display: none;
+}
+
+.terminal-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px var(--color-neon-primary);
+}
+
+.auth-form h3 {
+    text-align: center;
+    font-family: var(--font-titulo);
+    color: #fff;
+    margin: 0;
+}
+
+.auth-status {
+    text-align: center;
+    color: var(--color-neon-secondary);
+    font-size: 0.8rem;
+    font-family: var(--font-typewriter);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.form-footer:hover {
+    color: var(--color-neon-primary);
+    text-decoration: underline;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.form-checkbox input {
+    width: auto;
+    cursor: pointer;
+}
+
+.btn-login-nav {
+    border: 1px solid var(--color-neon-secondary) !important;
+    color: var(--color-neon-secondary) !important;
+    background: rgba(0, 255, 170, 0.05) !important;
+}
+
+.btn-login-nav:hover, .btn-login-nav.active {
+    background: var(--color-neon-secondary) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--color-neon-secondary) !important;
+}
+
+.auth-form input {
+    background: rgba(0, 10, 10, 0.6) !important;
+    border: 1px solid #333 !important;
+    border-left: 2px solid var(--color-neon-primary) !important;
+    color: #fff !important;
+    font-family: 'Roboto Mono', monospace !important;
+    padding: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.auth-form input:focus {
+    background: rgba(0, 20, 20, 0.8) !important;
+    border-color: var(--color-neon-primary) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1) !important;
+    outline: none !important;
+}
+
+.auth-form input::placeholder {
+    color: rgba(0, 255, 255, 0.3) !important;
+    font-style: italic;
+}
+
+.auth-form input:-webkit-autofill,
+.auth-form input:-webkit-autofill:hover, 
+.auth-form input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #050505 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-checkbox input {
+    accent-color: var(--color-neon-primary);
+    width: 18px;
+    height: 18px;
 }
