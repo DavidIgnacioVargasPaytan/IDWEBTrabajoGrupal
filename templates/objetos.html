@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos - No I'm Not a Human</title>
+    <link rel="icon" href="{{ url_for('static', filename='imagenes/favicon.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Como Sobrevivir a No, I'm Not a Human</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <i class="fa-solid fa-house-medical"></i> MENU
+            </a>
+            <a href="{{ url_for('origenes') }}">
+                <i class="fa-solid fa-dna"></i> ORIGENES
+            </a>
+            <a href="{{ url_for('objetos') }}">
+                <i class="fa-solid fa-cube"></i> OBJETOS
+            </a>
+            <a href="{{ url_for('personajes') }}">
+                <i class="fa-solid fa-user-secret"></i> PERSONAJES
+            </a>
+            <a href="{{ url_for('finales') }}">
+                <i class="fa-solid fa-skull"></i> FINALES
+            </a>
+            <a href="{{ url_for('contacto') }}">
+                <i class="fa-solid fa-tower-broadcast"></i> CONTACTO
+            </a>
+            <a href="{{ url_for('login') }}" class="btn-login-nav">
+                <i class="fa-solid fa-fingerprint"></i> ACCESO / REGISTRO
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-objetos">
+            
+            <h2 class="titulo-seccion">Archivo de Objetos</h2>
+
+            <section class="lista-detallada">
+                {% for objeto in objetos_flask %}
+                <article class="objeto-card">
+                    <div class="objeto-visual">
+                        <img src="/{{ objeto.imagen }}" alt="{{ objeto.nombre }}">
+                    </div>
+                    <div class="objeto-info">
+                        <h3>{{ objeto.nombre }}</h3>
+                        <dl>
+                            <dt>Uso</dt>
+                            <dd>{{ objeto.uso }}</dd>
+                            <dt>Efecto</dt>
+                            <dd>{{ objeto.efecto }}</dd>
+                        </dl>
+                    </div>
+                </article>
+                {% endfor %}
+            </section>
+
+            <section class="tabla-final">
+                <h3>Comparativa de Utilidad</h3>
+                <div class="tabla-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Objeto</th>
+                                <th>Tipo</th>
+                                <th>Utilidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for objeto in objetos_flask %}
+                            <tr>
+                                <td>{{ objeto.nombre_tabla }}</td>
+                                <td>{{ objeto.tipo }}</td>
+                                <td>{{ objeto.utilidad }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <address>Contacto 1: dvargasp@unsa.edu.pe</address>
+        <address>Contacto 2: jmacedoo@unsa.edu.pe</address>
+        <address>Contacto 3: dcahuanac@unsa.edu.pe</address>
+        <p>&copy; 2025 Laboratorios IDWEB - Ghost Productions</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/secrets.js') }}"></script>
+</body>
+</html>

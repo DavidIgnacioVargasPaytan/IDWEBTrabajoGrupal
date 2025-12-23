@@ -1,0 +1,522 @@
+[
+    {
+        "nombre": "VECINO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/vecino.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "El primer y único personaje que aparece en la primera noche. Actúa como tutorial."
+    },
+    {
+        "nombre": "NIÑA PEQUEÑA",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/nina-pequena.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Breve aparición en la segunda noche y segundo personaje en la quinta noche."
+    },
+    {
+        "nombre": "HOMBRE ALTO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/hombre-alto.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Primer personaje que aparece la segunda noche en todas las versiones."
+    },
+    {
+        "nombre": "CAJERA",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/cajera.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Segundo personaje que aparece en la segunda noche."
+    },
+    {
+        "nombre": "CHICO DEL ABRIGO",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/chico-abrigo.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Probabilidad aleatoria a partir de la segunda noche."
+    },
+    {
+        "nombre": "MUJER VIUDA",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/viuda.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Aparece aleatoriamente después de la segunda noche."
+    },
+    {
+        "nombre": "CHICO DEL SOL",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/chico-sol.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Si le das una cerveza, te recompensará con otro objeto."
+    },
+    {
+        "nombre": "CHICO AMOGUS",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/amogus.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece aleatoriamente después de la segunda noche."
+    },
+    {
+        "nombre": "CIRUJANO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/cirujano.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa. Cuarto personaje de la noche 4 en demo."
+    },
+    {
+        "nombre": "AGENTE DE LA AFAE",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/agente-AFAE.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Uno de los muchos personajes presentes en las tres versiones."
+    },
+    {
+        "nombre": "MAMÁ GRANDE",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/mama.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Aparece en la versión completa. Cuarto personaje en la quinta noche (Demo)."
+    },
+    {
+        "nombre": "BABUSHKA",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/babushka.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Segundo personaje en la sexta noche. Easter egg en VHS."
+    },
+    {
+        "nombre": "CAZADOR BARBUDO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/cazador.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Probabilidad aleatoria de aparecer después de la segunda noche."
+    },
+    {
+        "nombre": "PROFETA",
+        "categoria": "desconocido",
+        "imagen": "static/imagenes/personajes/profeta.png",
+        "badge_clase": "desconocido",
+        "badge_texto": "Desconocido",
+        "descripcion": "Tercer personaje en la cuarta noche."
+    },
+    {
+        "nombre": "REPARTIDOR",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/repartidor.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Aparece tras un pedido en For Rest. Entrega paquetes."
+    },
+    {
+        "nombre": "VISITANTE PÁLIDO",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/visitante.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Aparece en la tercera noche como primer personaje."
+    },
+    {
+        "nombre": "SEÑOR DE TRAJE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/señor-traje.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en una noche aleatoria en el lanzamiento completo."
+    },
+    {
+        "nombre": "MUJER SEDUCTORA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/mujer-seductora.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa del juego."
+    },
+    {
+        "nombre": "LAS HERMANAS",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/hermanas.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Dos personajes que cuentan como uno. Requiere mucha energía comprobarlas."
+    },
+    {
+        "nombre": "CHICO ENOJADO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/enojado.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Probabilidad aleatoria después de la segunda noche."
+    },
+    {
+        "nombre": "MEJOR HIJO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/best-son.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece después de la noche 8. Sus padres lo abandonaron."
+    },
+    {
+        "nombre": "MUJER DEL GATO",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/mujer-gato.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Única forma de desbloquear el acceso al Sótano y obtener al Gato."
+    },
+    {
+        "nombre": "ADOLESCENTE SIN PADRES",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/huerfana.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "HOMBRE CIEGO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/ciego.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Se arrancó los ojos tras presenciar el horror de 'ESO'."
+    },
+    {
+        "nombre": "STAND UP GUY",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/standup.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "MARIDO Y MUJER",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/esposos.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Cuentan como un solo personaje. Solo se interactúa con el esposo."
+    },
+    {
+        "nombre": "PEONES DEL CULTO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/cultista.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Grupo de personajes del Culto a la Muerte."
+    },
+    {
+        "nombre": "LÍDER DEL CULTO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/lider-culto.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Líder fanático que aparece en tu puerta."
+    },
+    {
+        "nombre": "FUMETA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/fumeta.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje aleatorio."
+    },
+    {
+        "nombre": "ROMÁNTICO MORBOSO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/romantico.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "EXMINISTRO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/exministro.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Posible encontrarlo al revisar la puerta por la noche."
+    },
+    {
+        "nombre": "BOMBERO DESFIGURADO",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/bombero.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Segundo personaje en la tercera noche (Demo)."
+    },
+    {
+        "nombre": "WIREFACE",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/wireface.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Si entra, ocupará el Trastero junto al Cirujano."
+    },
+    {
+        "nombre": "MAN IN HAZMAT",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/hazmat.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Su noche de debut es aleatoria."
+    },
+    {
+        "nombre": "ADIVINA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/adivina.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece por primera vez en la demo del Steam Next Fest 2025."
+    },
+    {
+        "nombre": "HOMBRE HERIDO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/herido.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Puede encontrarse en la puerta a partir de la noche 8."
+    },
+    {
+        "nombre": "SEPULTURERO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/sepulturero.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "INSOMNE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/insomne.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Tiene la posibilidad de aparecer a partir de la noche 8."
+    },
+    {
+        "nombre": "VAGABUNDO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/vagabundo.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Posible encontrarlo al revisar la puerta por la noche."
+    },
+    {
+        "nombre": "MAMÁ IRRESPONSABLE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/madre-irresponsable.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Puede aparecer entre la noche 1 y la noche 7."
+    },
+    {
+        "nombre": "MONJA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/monja.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "ABOGADO DEL SILLÓN",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/abogado.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "CHICO DE LA BANDANA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/bandana.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Pide ayuda para aprender a luchar."
+    },
+    {
+        "nombre": "TAXISTA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/taxista.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece aleatoriamente en la versión completa."
+    },
+    {
+        "nombre": "MAESTRA DE KINDER",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/maestra-kinder.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "CONSPIRANOICO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/conspiranoico.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "VIGILANTE",
+        "categoria": "humano",
+        "imagen": "static/imagenes/personajes/vigilante.png",
+        "badge_clase": "humano",
+        "badge_texto": "Siempre Humano",
+        "descripcion": "No busca refugio, solo vigila."
+    },
+    {
+        "nombre": "CHICO EN SILLA DE RUEDAS",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/lisiado.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Probabilidad aleatoria a partir de la noche 8."
+    },
+    {
+        "nombre": "ESPOSA DE LA AFAE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/esposa-afae.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "DEVORADOR DE HONGOS",
+        "categoria": "desconocido",
+        "imagen": "static/imagenes/personajes/devorador.png",
+        "badge_clase": "desconocido",
+        "badge_texto": "Desconocido",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "HOMBRE INMORTAL",
+        "categoria": "visitante",
+        "imagen": "static/imagenes/personajes/inmortal.png",
+        "badge_clase": "visitante",
+        "badge_texto": "Siempre Visitante",
+        "descripcion": "Puede encontrarse al revisar la puerta por la noche."
+    },
+    {
+        "nombre": "NIÑO DE IMPERMEABLE",
+        "categoria": "desconocido",
+        "imagen": "static/imagenes/personajes/impermeable.png",
+        "badge_clase": "desconocido",
+        "badge_texto": "Desconocido",
+        "descripcion": "Puede aparecer de repente cualquier día."
+    },
+    {
+        "nombre": "HOMBRE ALEGRE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/hombre-alegre.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Personaje de la versión completa."
+    },
+    {
+        "nombre": "MUJER TATUADA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/tatuada.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la primera actualización del juego."
+    },
+    {
+        "nombre": "THEATER KID",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/theater.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Basado en uno de los patrocinadores de Patreon."
+    },
+    {
+        "nombre": "HOMBRE EN ROPA INTERIOR",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/semidesnudo.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Basado en un fan del juego."
+    },
+    {
+        "nombre": "FANÁTICO DE CUENTOS",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/fanatico-cuentos.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la primera actualización."
+    },
+    {
+        "nombre": "DEUDOR",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/deudor.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la primera actualización."
+    },
+    {
+        "nombre": "FUGITIVO UNIVERSITARIO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/fugitivo.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Basado en un patrocinador de Patreon."
+    },
+    {
+        "nombre": "EL LEPROSO",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/leproso.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la actualización 'Sospechosos Habituales'."
+    },
+    {
+        "nombre": "CHICO ESPELUZNANTE",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/chico-espeluznante.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Muy escalofriante e incómodo."
+    },
+    {
+        "nombre": "GRAYSCALE ROCK-STAR",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/rockstar.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Basado en un patrocinador de Patreon."
+    },
+    {
+        "nombre": "PUNK GIRL",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/punk-girl.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la primera actualización."
+    },
+    {
+        "nombre": "TURISTA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/turista.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Aparece en la primera actualización."
+    },
+    {
+        "nombre": "ADICTO A ENERJEKA",
+        "categoria": "aleatorio",
+        "imagen": "static/imagenes/personajes/adicto-enerjeka.png",
+        "badge_clase": "aleatorio",
+        "badge_texto": "Aleatorio",
+        "descripcion": "Basado en un patrocinador."
+    }
+]

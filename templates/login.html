@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso al Sistema - No I'm Not a Human</title>
-    <link rel="icon" href="static/imagenes/favicon.png" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='imagenes/favicon.png') }}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
 </head>
 <body>
     <header>
         <h1>Protocolo de Seguridad</h1>
         <nav>
-            <a href="menu.html" class="active">
+            <a href="{{ url_for('home') }}">
                 <i class="fa-solid fa-house-medical"></i> MENU
             </a>
-            <a href="origenes.html">
+            <a href="{{ url_for('origenes') }}">
                 <i class="fa-solid fa-dna"></i> ORIGENES
             </a>
-            <a href="objetos.html">
+            <a href="{{ url_for('objetos') }}">
                 <i class="fa-solid fa-cube"></i> OBJETOS
             </a>
-            <a href="personajes.html">
+            <a href="{{ url_for('personajes') }}">
                 <i class="fa-solid fa-user-secret"></i> PERSONAJES
             </a>
-            <a href="finales.html">
+            <a href="{{ url_for('finales') }}">
                 <i class="fa-solid fa-skull"></i> FINALES
             </a>
-            <a href="contacto.html">
+            <a href="{{ url_for('contacto') }}">
                 <i class="fa-solid fa-tower-broadcast"></i> CONTACTO
             </a>
-            <a href="login.html" class="btn-login-nav">
+            <a href="{{ url_for('login') }}" class="btn-login-nav active">
                 <i class="fa-solid fa-fingerprint"></i> ACCESO / REGISTRO
             </a>
         </nav>
@@ -45,52 +46,59 @@
             </div>
 
             <div class="auth-content">
-                <form id="form-login" class="auth-form active">
-                    <div class="terminal-icon">🔒</div>
+                
+                <form id="form-login" class="auth-form active" action="{{ url_for('procesar_login') }}" method="POST">
+                    <div class="terminal-icon">
+                        <i class="fa-solid fa-fingerprint fa-beat" style="--fa-animation-duration: 2s;"></i>
+                    </div>
+                    
                     <h3>VERIFICACIÓN DE IDENTIDAD</h3>
                     <p class="auth-status">Esperando credenciales...</p>
 
                     <div class="form-group">
                         <label for="login-email">CORREO / ID:</label>
-                        <input type="email" id="login-email" placeholder="usuario@ejemplo.com" required>
+                        <input type="email" id="login-email" name="login-email" placeholder="usuario@ejemplo.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="login-pass">CLAVE DE ACCESO:</label>
-                        <input type="password" id="login-pass" placeholder="••••••••" required>
+                        <input type="password" id="login-pass" name="login-pass" placeholder="••••••••" required>
                     </div>
 
                     <button type="submit" class="btn-submit btn-full">ACCEDER AL SISTEMA</button>
                     <p class="form-footer">¿Olvidó su clave? Contacte a la AFAE.</p>
                 </form>
 
-                <form id="form-register" class="auth-form hidden">
-                    <div class="terminal-icon">🧬</div>
+                <form id="form-register" class="auth-form hidden" action="{{ url_for('procesar_registro') }}" method="POST">
+                    <div class="terminal-icon">
+                        <i class="fa-solid fa-dna fa-spin-pulse" style="--fa-animation-duration: 3s;"></i>
+                    </div>
+
                     <h3>REGISTRO DE NUEVO SUJETO</h3>
                     <p class="auth-status">Creando nuevo expediente...</p>
 
                     <div class="form-group">
                         <label for="reg-name">ALIAS / NOMBRE:</label>
-                        <input type="text" id="reg-name" placeholder="Sujeto #..." required>
+                        <input type="text" id="reg-name" name="reg-name" placeholder="Sujeto #..." required>
                     </div>
 
                     <div class="form-group">
                         <label for="reg-email">CORREO ELECTRÓNICO:</label>
-                        <input type="email" id="reg-email" placeholder="contacto@ejemplo.com" required>
+                        <input type="email" id="reg-email" name="reg-email" placeholder="contacto@ejemplo.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="reg-pass">CLAVE DE ACCESO:</label>
-                        <input type="password" id="reg-pass" placeholder="Mínimo 6 caracteres" required>
+                        <input type="password" id="reg-pass" name="reg-pass" placeholder="Mínimo 6 caracteres" required>
                     </div>
 
                     <div class="form-group">
                         <label for="reg-confirm">CONFIRMAR CLAVE:</label>
-                        <input type="password" id="reg-confirm" placeholder="Repita su clave" required>
+                        <input type="password" id="reg-confirm" name="reg-confirm" placeholder="Repita su clave" required>
                     </div>
 
                     <div class="form-checkbox">
-                        <input type="checkbox" id="human-check" required>
+                        <input type="checkbox" id="human-check" name="human-check" required>
                         <label for="human-check">Declaro que SOY HUMANO (Protocolo de Verdad)</label>
                     </div>
 
@@ -107,8 +115,8 @@
         <p>&copy; 2025 Laboratorios IDWEB - Ghost Productions</p>
     </footer>
 
-    <script src="script.js"></script> 
-    <script src="auth.js"></script>
-    <script src="secrets.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/secrets.js') }}"></script>
 </body>
 </html>

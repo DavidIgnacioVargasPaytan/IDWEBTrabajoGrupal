@@ -1,0 +1,65 @@
+[
+    {
+        "nombre": "Cámara Photográfica de Aura",
+        "nombre_tabla": "Cámara",
+        "imagen": "static/imagenes/objetos/Camara-aura.png",
+        "uso": "Toma una foto... y si ves manchas negras, ¡has encontrado un Visitante!",
+        "efecto": "Permite capturar evidencia de los Visitantes y revelar detalles invisibles a simple vista.",
+        "tipo": "Herramienta",
+        "utilidad": "Alta"
+    },
+    {
+        "nombre": "Teléfono",
+        "nombre_tabla": "Teléfono",
+        "imagen": "static/imagenes/objetos/Telefono.png",
+        "uso": "Llamar a todos los números disponibles desbloquea el 'Directorio telefónico'.",
+        "efecto": "Proporciona pistas sobre la historia y advertencias. Puede sonar para generar tensión.",
+        "tipo": "Comunicación",
+        "utilidad": "Media"
+    },
+    {
+        "nombre": "Hongo",
+        "nombre_tabla": "Hongo",
+        "imagen": "static/imagenes/objetos/Hongo.png",
+        "uso": "Una vez consumido comienzan a aparecer nuevos objetos por toda la casa.",
+        "efecto": "Cambia temporalmente la visión, revelando caminos ocultos o la verdadera naturaleza del entorno.",
+        "tipo": "Consumible",
+        "utilidad": "Alta"
+    },
+    {
+        "nombre": "Enerjeka",
+        "nombre_tabla": "Enerjeka",
+        "imagen": "static/imagenes/objetos/Enerjeka.png",
+        "uso": "Bebida energética consumible.",
+        "efecto": "Aumenta temporalmente la velocidad y los reflejos. Útil para escapar.",
+        "tipo": "Consumible",
+        "utilidad": "Media"
+    },
+    {
+        "nombre": "Hoja de aviso de AFAE",
+        "nombre_tabla": "Hoja AFAE",
+        "imagen": "static/imagenes/objetos/Hoja de aviso de AFAE.png",
+        "uso": "Documento informativo importante.",
+        "efecto": "Contiene protocolos de seguridad y advertencias sobre los Visitantes.",
+        "tipo": "Documento",
+        "utilidad": "Alta"
+    },
+    {
+        "nombre": "Cigarrillos",
+        "nombre_tabla": "Cigarrillos",
+        "imagen": "static/imagenes/objetos/Cigarrillos.png",
+        "uso": "Fumar ayuda a reponer completamente la barra de energía.",
+        "efecto": "Reduce el estrés temporalmente. El humo revela corrientes de aire o presencias invisibles.",
+        "tipo": "Consumible",
+        "utilidad": "Media"
+    },
+    {
+        "nombre": "Radio",
+        "nombre_tabla": "Radio",
+        "imagen": "static/imagenes/objetos/Radio.png",
+        "uso": "Sintonizar frecuencias para escuchar transmisiones.",
+        "efecto": "Emite estática cerca de Visitantes. Capta mensajes de otras entidades.",
+        "tipo": "Detector",
+        "utilidad": "Alta"
+    }
+]

@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - No I'm Not a Human</title>
-    <link rel="icon" href="static/imagenes/favicon.png" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='imagenes/favicon.png') }}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
         <h1>Centro de Comunicaciones</h1>
         <nav>
-            <a href="menu.html" class="active">
+            <a href="{{ url_for('home') }}">
                 <i class="fa-solid fa-house-medical"></i> MENU
             </a>
-            <a href="origenes.html">
+            <a href="{{ url_for('origenes') }}">
                 <i class="fa-solid fa-dna"></i> ORIGENES
             </a>
-            <a href="objetos.html">
+            <a href="{{ url_for('objetos') }}">
                 <i class="fa-solid fa-cube"></i> OBJETOS
             </a>
-            <a href="personajes.html">
+            <a href="{{ url_for('personajes') }}">
                 <i class="fa-solid fa-user-secret"></i> PERSONAJES
             </a>
-            <a href="finales.html">
+            <a href="{{ url_for('finales') }}">
                 <i class="fa-solid fa-skull"></i> FINALES
             </a>
-            <a href="contacto.html">
+            <a href="{{ url_for('contacto') }}" class="active">
                 <i class="fa-solid fa-tower-broadcast"></i> CONTACTO
             </a>
-            <a href="login.html" class="btn-login-nav">
+            <a href="{{ url_for('login') }}" class="btn-login-nav">
                 <i class="fa-solid fa-fingerprint"></i> ACCESO / REGISTRO
             </a>
         </nav>
@@ -40,13 +40,29 @@
     <main class="main-contacto">
         <div class="contact-terminal">
             <div class="terminal-header">
-                <span class="status-dot"></span> ESTADO: LÍNEA SEGURA
+                <span class="status-dot"></span>
+                <span>CONEXIÓN SEGURA AFAE V.4.0.2 // ESTADO: EN LÍNEA</span>
             </div>
-            
-            <h2>TRANSMISIÓN DE DATOS</h2>
-            <p class="terminal-intro">Utilice este canal para reportar errores, enviar sugerencias o contactar con los desarrolladores. La AFAE monitorea esta frecuencia.</p>
 
-            <form action="#" method="post" class="neon-form">
+            <h2>REPORTAR ANOMALÍA</h2>
+            <p class="terminal-intro">Utilice este canal para reportar avistamientos de Visitantes o contactar con los desarrolladores. La AFAE monitorea esta frecuencia.</p>
+
+            {% if exito %}
+            <div style="border: 1px solid var(--color-neon-secondary); background: rgba(0, 255, 170, 0.1); color: var(--color-neon-secondary); padding: 1rem; margin-bottom: 2rem; text-align: center; font-family: var(--font-typewriter);">
+                <i class="fa-solid fa-check-circle"></i> {{ exito }}
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div style="border: 1px solid var(--color-alert); background: rgba(255, 50, 50, 0.1); color: var(--color-alert); padding: 1rem; margin-bottom: 2rem; text-align: center; font-family: var(--font-typewriter);">
+                <i class="fa-solid fa-triangle-exclamation"></i> {{ error }}
+            </div>
+            {% endif %}
+
+            <p id="contact-status" style="text-align: center; font-family: var(--font-typewriter); min-height: 1.5rem; margin-bottom: 1rem; color: var(--color-neon-secondary);"></p>
+
+            <form id="form-contacto" action="{{ url_for('contacto') }}" method="POST" class="neon-form">
+                
                 <div class="form-group">
                     <label for="nombre">IDENTIFICACIÓN (Nombre):</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingrese su ID..." required>
@@ -59,7 +75,7 @@
 
                 <div class="form-group">
                     <label for="mensaje">DATOS DEL MENSAJE:</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describa la situación..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describa la situación (Mínimo 10 caracteres)..." required></textarea>
                 </div>
 
                 <div class="form-actions">
@@ -76,7 +92,8 @@
         <p>&copy; 2025 Laboratorios IDWEB - Ghost Productions</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="secrets.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contacto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/secrets.js') }}"></script>
 </body>
 </html>
