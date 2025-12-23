@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formLogin.classList.add('hidden');
     });
 
-    formLogin.addEventListener('submit', (e) => {
+    formLogin.addEventListener('submit', async (e) => {
         e.preventDefault(); 
         
         const btn = formLogin.querySelector('button');
@@ -43,29 +43,44 @@ document.addEventListener('DOMContentLoaded', () => {
         setLoadingState(btn, true, "VERIFICANDO CREDENCIALES...");
         updateStatus(statusLogin, "CONECTANDO CON SERVIDOR CENTRAL...", "normal");
 
-        setTimeout(() => {
+        try {
+            // Enviamos los datos al archivo PHP
+            const response = await fetch('auth_handler.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    accion: 'login',
+                    email: email,
+                    password: pass
+                })
+            });
+
+            const result = await response.json();
             setLoadingState(btn, false, originalText);
-            
-            if (pass.length < 6) {
-                updateStatus(statusLogin, "ACCESO DENEGADO: CLAVE INCORRECTA", "error");
-            } else {
+
+            if (result.status === 'success') {
                 localStorage.setItem('isLoggedIn', 'true');
-                localStorage.setItem('userName', email.split('@')[0]); 
+                localStorage.setItem('userName', result.nombre); 
                 
                 updateStatus(statusLogin, "ACCESO AUTORIZADO.", "success");
-                
-                setTimeout(() => {
-                    window.location.href = 'menu.html';
-                }, 1000);
+                setTimeout(() => { window.location.href = 'menu.html'; }, 1000);
+            } else {
+                updateStatus(statusLogin, "ERROR: " + result.message.toUpperCase(), "error");
             }
-        }, 2000); 
+
+        } catch (error) {
+            setLoadingState(btn, false, originalText);
+            updateStatus(statusLogin, "ERROR DE CONEXIÓN CON EL NÚCLEO", "error");
+        }
     });
 
-    formRegister.addEventListener('submit', (e) => {
+    formRegister.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const btn = formRegister.querySelector('button');
         const originalText = btn.innerText;
+        const nombre = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
         const p1 = regPass.value;
         const p2 = regConfirm.value;
         const isHuman = document.getElementById('human-check').checked;
@@ -74,8 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateStatus(statusRegister, "ERROR: LAS CLAVES NO COINCIDEN", "error");
             regConfirm.style.borderColor = "#ff3333";
             return;
-        } else {
-            regConfirm.style.borderColor = "#333";
         }
 
         if (!isHuman) {
@@ -86,17 +99,36 @@ document.addEventListener('DOMContentLoaded', () => {
         setLoadingState(btn, true, "ENCRIPTANDO DATOS...");
         updateStatus(statusRegister, "GENERANDO NUEVO EXPEDIENTE...", "normal");
 
-        setTimeout(() => {
-            setLoadingState(btn, false, originalText);
-            updateStatus(statusRegister, "REGISTRO COMPLETADO.", "success");
-            formRegister.reset();
-            
-            setTimeout(() => {
-                tabLogin.click();
-                updateStatus(statusLogin, "LISTO PARA INICIAR SESIÓN.", "success");
-            }, 1500);
+        try {
+            const response = await fetch('auth_handler.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    accion: 'registro',
+                    nombre: nombre,
+                    email: email,
+                    password: p1
+                })
+            });
 
-        }, 2500);
+            const result = await response.json();
+            setLoadingState(btn, false, originalText);
+
+            if (result.status === 'success') {
+                updateStatus(statusRegister, "REGISTRO COMPLETADO.", "success");
+                formRegister.reset();
+                setTimeout(() => {
+                    tabLogin.click();
+                    updateStatus(statusLogin, "LISTO PARA INICIAR SESIÓN.", "success");
+                }, 1500);
+            } else {
+                updateStatus(statusRegister, "ERROR: " + result.message.toUpperCase(), "error");
+            }
+
+        } catch (error) {
+            setLoadingState(btn, false, originalText);
+            updateStatus(statusRegister, "ERROR AL CREAR EXPEDIENTE", "error");
+        }
     });
 
     function updateStatus(element, message, type) {
@@ -108,16 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setLoadingState(button, isLoading, text) {
-        if (isLoading) {
-            button.disabled = true;
-            button.innerText = text;
-            button.style.opacity = "0.7";
-            button.style.cursor = "wait";
-        } else {
-            button.disabled = false;
-            button.innerText = text;
-            button.style.opacity = "1";
-            button.style.cursor = "pointer";
-        }
+        button.disabled = isLoading;
+        button.innerText = text;
+        button.style.opacity = isLoading ? "0.7" : "1";
+        button.style.cursor = isLoading ? "wait" : "pointer";
     }
 });
