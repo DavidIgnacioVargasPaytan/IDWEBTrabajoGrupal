@@ -1,6 +1,6 @@
 import sqlite3
 import json
-from flask import Flask, render_template, url_for, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect, flash
 
 app = Flask(__name__)
 app.secret_key = 'clave_super_secreta_protocolo_fantasma'
@@ -49,27 +49,41 @@ def login():
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     mensaje_exito = None
+    mensaje_error = None
     
     if request.method == 'POST':
-        nombre = request.form.get('nombre')
-        email = request.form.get('email')
-        mensaje = request.form.get('mensaje')
+        nombre = request.form.get('nombre', '').strip()
+        email = request.form.get('email', '').strip()
+        mensaje = request.form.get('mensaje', '').strip()
         
-        conn = get_db_connection()
-        conn.execute('INSERT INTO mensajes (nombre, email, mensaje) VALUES (?, ?, ?)',
-                     (nombre, email, mensaje))
-        conn.commit()
-        conn.close()
-        
-        mensaje_exito = f"Transmisión guardada en BD, Agente {nombre}. La AFAE le contactará."
+        if not nombre or len(nombre) < 3:
+            mensaje_error = "ERROR: Identificación muy corta"
+        elif not email or '@' not in email:
+            mensaje_error = "ERROR: Email inválido"
+        elif not mensaje or len(mensaje) < 10:
+            mensaje_error = "ERROR: Mensaje demasiado corto"
+        else:
+            try:
+                conn = get_db_connection()
+                conn.execute('INSERT INTO mensajes (nombre, email, mensaje) VALUES (?, ?, ?)',
+                           (nombre, email, mensaje))
+                conn.commit()
+                conn.close()
+                
+                mensaje_exito = f"Transmisión guardada en BD, Agente {nombre}. La AFAE le contactará."
+            except Exception as e:
+                mensaje_error = f"ERROR: No se pudo guardar el mensaje. {str(e)}"
 
-    return render_template('contacto.html', exito=mensaje_exito)
+    return render_template('contacto.html', exito=mensaje_exito, error=mensaje_error)
 
 @app.route('/procesar_registro', methods=['POST'])
 def procesar_registro():
-    nombre = request.form.get('reg-name')
-    email = request.form.get('reg-email')
-    password = request.form.get('reg-pass')
+    nombre = request.form.get('reg-name', '').strip()
+    email = request.form.get('reg-email', '').strip()
+    password = request.form.get('reg-pass', '').strip()
+    
+    if not nombre or not email or not password:
+        return redirect(url_for('login'))
     
     conn = get_db_connection()
     try:
@@ -77,17 +91,21 @@ def procesar_registro():
                      (nombre, email, password))
         conn.commit()
         session['usuario'] = nombre.upper()
+        return redirect(url_for('home'))
     except sqlite3.IntegrityError:
-        return "El email ya está registrado"
+        return render_template('login.html', error_registro="El email ya está registrado")
+    except Exception as e:
+        return render_template('login.html', error_registro=f"Error al registrar: {str(e)}")
     finally:
         conn.close()
-        
-    return redirect(url_for('home'))
 
 @app.route('/procesar_login', methods=['POST'])
 def procesar_login():
-    email = request.form.get('login-email')
-    password = request.form.get('login-pass')
+    email = request.form.get('login-email', '').strip()
+    password = request.form.get('login-pass', '').strip()
+    
+    if not email or not password:
+        return redirect(url_for('login'))
     
     conn = get_db_connection()
     user = conn.execute('SELECT * FROM usuarios WHERE email = ?', (email,)).fetchone()
@@ -97,7 +115,7 @@ def procesar_login():
         session['usuario'] = user['nombre'].upper()
         return redirect(url_for('home'))
     else:
-        return redirect(url_for('login'))
+        return render_template('login.html', error_login="Credenciales inválidas")
 
 @app.route('/logout')
 def logout():
