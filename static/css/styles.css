@@ -115,7 +115,7 @@ nav a:hover, nav a.active {
     overflow: hidden;
     border-bottom: 2px solid var(--color-neon-primary);
     background: linear-gradient(rgba(0, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
-                url('static/imagenes/portada.jpg'); 
+                url('/static/imagenes/portada.jpg'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; 

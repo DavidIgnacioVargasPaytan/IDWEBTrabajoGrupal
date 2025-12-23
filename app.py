@@ -1,9 +1,16 @@
+import sqlite3
 import json
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, session, redirect
 
 app = Flask(__name__)
+app.secret_key = 'clave_super_secreta_protocolo_fantasma'
 
-def cargar_datos(archivo):
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def cargar_datos_json(archivo):
     ruta = f'data/{archivo}'
     try:
         with open(ruta, 'r', encoding='utf-8') as f:
@@ -17,68 +24,85 @@ def home():
 
 @app.route('/personajes')
 def personajes():
-    lista_personajes = cargar_datos('personajes.json')
-    return render_template('personajes.html', personajes_flask=lista_personajes)
+    lista = cargar_datos_json('personajes.json')
+    return render_template('personajes.html', personajes_flask=lista)
+
+@app.route('/objetos')
+def objetos():
+    lista = cargar_datos_json('objetos.json')
+    return render_template('objetos.html', objetos_flask=lista)
 
 @app.route('/origenes')
 def origenes():
     return render_template('origenes.html')
 
-@app.route('/objetos')
-def objetos():
-    lista_objetos = cargar_datos('objetos.json')
-    return render_template('objetos.html', objetos_flask=lista_objetos)
-
 @app.route('/finales')
 def finales():
     return render_template('finales.html')
 
+@app.route('/login')
+def login():
+    if 'usuario' in session:
+        return redirect(url_for('home'))
+    return render_template('login.html')
+
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     mensaje_exito = None
-    error = None 
     
     if request.method == 'POST':
-        nombre = request.form.get('nombre', '').strip()
-        email = request.form.get('email', '').strip()
-        mensaje = request.form.get('mensaje', '').strip()
+        nombre = request.form.get('nombre')
+        email = request.form.get('email')
+        mensaje = request.form.get('mensaje')
         
-        if not nombre or len(nombre) < 3:
-            error = "Error: Identificación inválida."
-        elif not email or '@' not in email:
-            error = "Error: Frecuencia de respuesta inválida."
-        elif not mensaje or len(mensaje) < 10:
-            error = "Error: El mensaje carece de datos suficientes."
-        else:
-            print(f"--- NUEVO MENSAJE RECIBIDO ---")
-            print(f"De: {nombre} ({email})")
-            print(f"Mensaje: {mensaje}")
-            print("------------------------------")
-            mensaje_exito = f"Transmisión recibida, Agente {nombre}. La AFAE le contactará."
+        conn = get_db_connection()
+        conn.execute('INSERT INTO mensajes (nombre, email, mensaje) VALUES (?, ?, ?)',
+                     (nombre, email, mensaje))
+        conn.commit()
+        conn.close()
+        
+        mensaje_exito = f"Transmisión guardada en BD, Agente {nombre}. La AFAE le contactará."
 
-    return render_template('contacto.html', exito=mensaje_exito, error=error)
+    return render_template('contacto.html', exito=mensaje_exito)
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
+@app.route('/procesar_registro', methods=['POST'])
+def procesar_registro():
+    nombre = request.form.get('reg-name')
+    email = request.form.get('reg-email')
+    password = request.form.get('reg-pass')
+    
+    conn = get_db_connection()
+    try:
+        conn.execute('INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)',
+                     (nombre, email, password))
+        conn.commit()
+        session['usuario'] = nombre.upper()
+    except sqlite3.IntegrityError:
+        return "El email ya está registrado"
+    finally:
+        conn.close()
+        
+    return redirect(url_for('home'))
 
 @app.route('/procesar_login', methods=['POST'])
 def procesar_login():
     email = request.form.get('login-email')
     password = request.form.get('login-pass')
     
-    print(f"INTENTO DE LOGIN: {email} | Pass: {password}")
+    conn = get_db_connection()
+    user = conn.execute('SELECT * FROM usuarios WHERE email = ?', (email,)).fetchone()
+    conn.close()
     
-    return render_template('menu.html')
+    if user and user['password'] == password:
+        session['usuario'] = user['nombre'].upper()
+        return redirect(url_for('home'))
+    else:
+        return redirect(url_for('login'))
 
-@app.route('/procesar_registro', methods=['POST'])
-def procesar_registro():
-    nombre = request.form.get('reg-name')
-    email = request.form.get('reg-email')
-    
-    print(f"NUEVO USUARIO: {nombre} | Email: {email}")
-    
-    return render_template('login.html')
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
